@@ -1,0 +1,24 @@
+.logo {
+  width: 120px;
+  height: 31px;
+  /* background: url('../assets/image/football.ico'); */
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.btn-toggle {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-toggle {
+    display: block;
+  }
+  /* .menu-item {
+    display: none;
+  } */
+}
