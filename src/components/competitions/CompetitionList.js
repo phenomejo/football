@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Layout, Card } from 'antd'
+import { Card } from 'antd'
 
 import competitionApi from '../../api/competitionApi'
 import './competitions.css'
@@ -21,7 +21,8 @@ const CompetitionList = () => {
   const renderLeague = leagueList.map((v) => {
     return (
       <Card hoverable
-            style={{ width: 240 }}
+            style={{ width: 220 }}
+            key={v.id}
             cover={<img alt="example" className="logo-image" src={
               v.id === 2013 ? require('../../assets/image/serie_A_brasil.png') :
               v.id === 2021 ? require('../../assets/image/premier-english.png') :
@@ -42,8 +43,10 @@ const CompetitionList = () => {
   })
 
   return (
-    <div className="grid">
-      {leagueList.length === 0 ? null : renderLeague}
+    <div className="page-content">
+      <div className="grid">
+        {leagueList.length === 0 ? null : renderLeague}
+      </div>
     </div>
   )
 }
