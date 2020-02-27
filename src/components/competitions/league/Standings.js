@@ -3,7 +3,7 @@ import { Table, Form, Radio } from 'antd'
 
 const columns = [
   { title: '#', dataIndex: 'position', width: 35, fixed: 'left' },
-  { title: '', dataIndex: 'team.crestUrl', render: (text, record) => <img src={text} alt={record.team.id} style={{ width: 30, height: 30 }} />, width: 30, fixed: 'left' },
+  { title: '', dataIndex: 'team.crestUrl', render: (text, record) => <img src={text} alt={record.team.id} style={{ width: 30, height: 30 }} />, width: 40, fixed: 'left' },
   { title: 'Team', dataIndex: 'team.name', width: '40%' },
   // render: (text, record) => <span><img src={record.team.crestUrl} alt={record.team.name} style={{ width: 30, height: 30 }} /> {text}</span>, width: '45%' },
   { title: 'GP', dataIndex: 'playedGames', width: 50 },
