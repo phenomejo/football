@@ -2,16 +2,18 @@ import React from 'react'
 import { Table, Form, Radio } from 'antd'
 
 const columns = [
-  { title: '#', dataIndex: 'position', align: 'center', width: '8%' },
-  { title: 'Team', dataIndex: 'team.name', render: (text, record) => <span><img src={record.team.crestUrl} alt={record.team.name} style={{ width: 30, height: 30 }} /> {text}</span>, width: '45%' },
-  { title: 'GP', dataIndex: 'playedGames' },
-  { title: 'W', dataIndex: 'won' },
-  { title: 'D', dataIndex: 'draw' },
-  { title: 'L', dataIndex: 'lost' },
-  { title: 'GF', dataIndex: 'goalsFor' },
-  { title: 'GA', dataIndex: 'goalsAgainst' },
-  { title: 'GD', dataIndex: 'goalDifference' },
-  { title: 'P', dataIndex: 'points' }
+  { title: '#', dataIndex: 'position', width: 35, fixed: 'left' },
+  { title: '', dataIndex: 'team.crestUrl', render: (text) => <img src={text} alt={text} style={{ width: 30, height: 30 }} />, width: 50, fixed: 'left' },
+  { title: 'Team', dataIndex: 'team.name', width: '40%' },
+  // render: (text, record) => <span><img src={record.team.crestUrl} alt={record.team.name} style={{ width: 30, height: 30 }} /> {text}</span>, width: '45%' },
+  { title: 'GP', dataIndex: 'playedGames', width: 50 },
+  { title: 'W', dataIndex: 'won', width: 50 },
+  { title: 'D', dataIndex: 'draw', width: 50 },
+  { title: 'L', dataIndex: 'lost', width: 50 },
+  { title: 'GF', dataIndex: 'goalsFor', width: 50 },
+  { title: 'GA', dataIndex: 'goalsAgainst', width: 50 },
+  { title: 'GD', dataIndex: 'goalDifference', width: 50 },
+  { title: 'PTS', dataIndex: 'points', width: 50, fixed: 'right' }
 ]
 
 const Standings = (props) => {

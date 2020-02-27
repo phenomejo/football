@@ -30,7 +30,7 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     })
   ),
-  devServer: overrideDevServer(
-    devServerConfig()
-  )
+  // devServer: overrideDevServer(
+  //   devServerConfig()
+  // )
 }

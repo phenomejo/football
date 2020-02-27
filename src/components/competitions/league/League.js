@@ -11,7 +11,7 @@ const League = (props) => {
   return (
     <>
       <Card hoverable
-            style={{ width: 220 }}
+            style={{ width: 200 }}
             onClick={e => onSelectLeague(props.league)}
             cover={<img alt="example" className="logo-image" src={
               props.league.id === 2021 ? require('@/assets/image/premier-english.png') :

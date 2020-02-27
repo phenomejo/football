@@ -27,7 +27,7 @@ const HeaderPage = () => {
 
   return (
     <>
-    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+    <Header style={{ position: 'fixed', zIndex: 9999, width: '100%' }}>
       <div className="logo" />
       {/* <img src={require('../assets/image/p05394v7.jpg')} className="logo" /> */}
       <Menu
