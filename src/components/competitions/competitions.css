@@ -12,7 +12,8 @@
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 0fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(220px, 0fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 20px;
 }
