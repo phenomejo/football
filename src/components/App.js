@@ -4,7 +4,7 @@ import { Layout } from 'antd'
 import HeaderPage from './layouts/HeaderPage'
 import FooterPage from './layouts/FooterPage'
 
-import CompetitionList from './competitions/CompetitionList'
+import LeagueList from './competitions/league/LeagueList'
 
 const { Content } = Layout;
 
@@ -19,7 +19,7 @@ const App = () => {
           <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb> */}
         <div className="container">
-          <CompetitionList />
+          <LeagueList />
         </div>
       </Content>
       <FooterPage/>

@@ -1,4 +1,5 @@
-const { override, fixBabelImports, overrideDevServer } = require('customize-cra');
+const { override, fixBabelImports, overrideDevServer, addWebpackAlias } = require('customize-cra');
+const path = require('path');
 
 const devServerConfig = () => config => {
   return {
@@ -25,6 +26,9 @@ module.exports = {
       libraryDirectory: 'es',
       style: 'css',
     }),
+    addWebpackAlias({
+      '@': path.resolve(__dirname, 'src'),
+    })
   ),
   devServer: overrideDevServer(
     devServerConfig()

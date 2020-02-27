@@ -21,7 +21,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "react-app-rewired start --mode development",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
