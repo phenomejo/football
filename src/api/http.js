@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-import { BASE_API, TOKEN_API } from '../util/Constant'
+import { FULL_URL_API, TOKEN_API } from '../util/Constant'
 
 const http = axios.create({
-  baseURL: BASE_API,
+  baseURL: FULL_URL_API,
   timeout: 1000,
   headers: {
     'X-Auth-Token': TOKEN_API
