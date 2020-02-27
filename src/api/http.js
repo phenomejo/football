@@ -4,7 +4,7 @@ import { FULL_URL_API, TOKEN_API } from '../util/Constant'
 
 const http = axios.create({
   baseURL: FULL_URL_API,
-  timeout: 1000,
+  timeout: 10000,
   headers: {
     'X-Auth-Token': TOKEN_API
   }
