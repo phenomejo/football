@@ -5,7 +5,7 @@ const { Footer } = Layout
 
 const FooterPage = () => {
   return (
-    <Footer style={{ textAlign: 'center', position: "fixed", zIndex: 1, width: '100%', bottom: '0' }}>Ant Design ©2018 Created by Ant UED</Footer>
+    <Footer>Jojo Football Club ©2020 Created by Fenomejo</Footer>
   )
 }
 

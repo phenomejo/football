@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Layout>
       <HeaderPage />
-      <Content style={{ padding: '0 50px', marginTop: 64 }}>
+      <Content>
         {/* <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>

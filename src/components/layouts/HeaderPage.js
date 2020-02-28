@@ -27,14 +27,14 @@ const HeaderPage = () => {
 
   return (
     <>
-    <Header style={{ position: 'fixed', zIndex: 9999, width: '100%' }}>
+    <Header>
       <div className="logo" />
       {/* <img src={require('../assets/image/p05394v7.jpg')} className="logo" /> */}
       <Menu
         className="menu-item"
         theme="dark"
         mode={ toggle ? 'inline' : 'horizontal' }
-        defaultSelectedKeys={['2']}
+        defaultSelectedKeys={['1']}
         style={{ lineHeight: '64px', display: toggle || width > 768 ? 'block' : 'none' }}
       >
         <Menu.Item key="1">nav 1</Menu.Item>
