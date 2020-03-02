@@ -28,8 +28,8 @@ const HeaderPage = () => {
   return (
     <>
     <Header>
-      <div className="logo" />
-      {/* <img src={require('../assets/image/p05394v7.jpg')} className="logo" /> */}
+      {/* <div className="logo" /> */}
+      <img src={require('@/assets/image/logo.jpg')} className="logo" />
       <Menu
         className="menu-item"
         theme="dark"

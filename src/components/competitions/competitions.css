@@ -6,11 +6,17 @@
   .team {
     width: 165px;
   }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .team {
     width: 145px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   }
 }
 
@@ -32,16 +38,4 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 20px;
-}
-
-@media only screen and (max-width: 804px) {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-  }
 }

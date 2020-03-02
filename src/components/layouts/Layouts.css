@@ -14,11 +14,11 @@
 }
 
 .logo {
-  width: 120px;
-  height: 31px;
-  /* background: url('../assets/image/football.ico'); */
+  /* width: 120px; */
+  height: 64px;
   background: rgba(255, 255, 255, 0.2);
-  margin: 16px 24px 16px 0;
+  margin-right: 24px;
+  /* margin: 16px 24px 16px 0; */
   float: left;
 }
 
