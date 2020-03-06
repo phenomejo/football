@@ -13,13 +13,7 @@ const League = (props) => {
       <Card hoverable
             className="team"
             onClick={e => onSelectLeague(props.league)}
-            cover={<img alt="example" className="logo-image" src={
-              props.league.id === 2021 ? require('@/assets/image/premier-english.png') :
-              props.league.id === 2015 ? require('@/assets/image/Ligue_1_frence.png') :
-              props.league.id === 2002 ? require('@/assets/image/Bundesliga.png') :
-              props.league.id === 2019 ? require('@/assets/image/Serie_A_italy.png') :
-              props.league.id === 2014 ? require('@/assets/image/La_Liga.png') : null
-            } /> }>
+            cover={<img alt="example" className="logo-image" src={require(`@/assets/image/${props.league.id}.png`)} /> }>
         <Meta title={props.league.name} description={props.league.area.name} />
       </Card>
     </>

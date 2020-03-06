@@ -16,7 +16,7 @@ const Matchs = () => {
 
   const renderTeam = (team) => {
     return team.map(v => {
-      return <List.Item key={`${v.id}`}>
+      return <List.Item key={` ${v.id}`}>
           <span>{ moment(v.utcDate).format('HH:mm') }</span>
           <div style={{ margin: '0 auto' }}>
             { v.homeTeam.name } vs { v.awayTeam.name }
@@ -27,8 +27,8 @@ const Matchs = () => {
 
   const renderLeague = (date, match) => {
     return match.map(v => {
-      return <div style={{ width: '75%', margin: '0 auto' }}>
-        <List header={<div style={{ fontWeight: 700, fontSize: 20 }}>{v.leagueName}</div>} key={`${date} - ${v.leagueName}`}>
+      return <div style={{ width: '75%', margin: '0 auto' }} key={`${date} - ${v.leagueName}`}>
+        <List header={<div style={{ fontWeight: 700, fontSize: 20 }}>{v.leagueName}</div>}>
           { renderTeam(v.league) }
         </List>
       </div>

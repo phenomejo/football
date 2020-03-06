@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route } from "react-router-dom"
-import { Layout } from 'antd'
+import { Layout, BackTop } from 'antd'
 
 import HeaderPage from './layouts/HeaderPage'
 import FooterPage from './layouts/FooterPage'
@@ -28,6 +28,7 @@ const App = () => {
         </Content>
         <FooterPage/>
       </BrowserRouter>
+      <BackTop visibilityHeight={20} />
     </Layout>
   )
 }
