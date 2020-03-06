@@ -33,7 +33,7 @@ const Standings = (props) => {
           <Radio.Button value="AWAY">AWAY</Radio.Button>
         </Radio.Group>
         </Form.Item>
-        <Table rowKey={record => record.team.id} columns={columns} dataSource={props.standings} pagination={false} size='small' scroll={{ x: 700 }} />
+        <Table rowKey={record => record.team.id} columns={columns} dataSource={props.standing} pagination={false} size='small' scroll={{ x: 700 }} />
       </div>
     </>
   )

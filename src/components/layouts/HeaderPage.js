@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Layout, Menu, Button, Icon } from 'antd'
 
 import './Layouts.css'
@@ -29,16 +30,16 @@ const HeaderPage = () => {
     <>
     <Header>
       {/* <div className="logo" /> */}
-      <img src={require('@/assets/image/logo.jpg')} className="logo" />
+      <img src={require('@/assets/image/logo.jpg')} alt="logo" className="logo" />
       <Menu
         className="menu-item"
         theme="dark"
         mode={ toggle ? 'inline' : 'horizontal' }
-        defaultSelectedKeys={['1']}
+        defaultSelectedKeys={[useLocation().pathname]}
         style={{ lineHeight: '64px', display: toggle || width > 768 ? 'block' : 'none' }}
       >
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
+        <Menu.Item key="/"><Link to="/">ตารางคะแนน</Link></Menu.Item>
+        <Menu.Item key="/match"><Link to="/match">ตารางแข่ง</Link></Menu.Item>
         <Menu.Item key="3">nav 3</Menu.Item>
         <Menu.Item key="4">nav 4</Menu.Item>
         <Menu.Item key="5">nav 5</Menu.Item>

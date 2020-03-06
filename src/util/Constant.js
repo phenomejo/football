@@ -3,6 +3,14 @@ export const BASE_API = '/v2'
 export const TOKEN_API = '7bd6fd0c3208452eb2964b83537009df'
 export const LEAGUE_ID = [2021, 2015, 2002, 2019, 2014]
 
+export const SET_LEAGUE = 'SET_LEAGUE'
+export const SET_CURRENT_LEAGUE = 'SET_CURRENT_LEAGUE'
+
+export const SET_STANDING = 'SET_STANDING'
+export const SET_CURRENT_STANDING = 'SET_CURRENT_STANDING'
+
+export const SET_MATCH = 'SET_MATCH'
+
 // export const COLUMNS = [
 //   { title: '#', dataIndex: 'position', width: '4%' },
 //   { title: 'Team', dataIndex: 'name', render: text => <a>{text}</a> },

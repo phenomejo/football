@@ -22,7 +22,8 @@
 }
 
 .page-content {
-  width: calc(100% - 100px);
+  /* width: calc(100% - 100px); */
+  width: 80%;
   margin: 0 auto;
 }
 

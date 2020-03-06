@@ -6,7 +6,7 @@ export default {
       return resp
     })
   },
-  getstandings (id, params) {
+  getStandings (id, params) {
     return http.get(`/competitions/${id}/standings`, { params }).then((resp) => {
       return resp
     })
