@@ -44,11 +44,18 @@ const HeaderPage = () => {
         defaultSelectedKeys={[useLocation().pathname]}
         style={{ lineHeight: '64px', display: toggle || width > 768 ? 'block' : 'none' }}
       >
-        <Menu.Item key="/" onClick={onChangePath}><Link to="/">ตารางคะแนน</Link></Menu.Item>
-        <Menu.Item key="/match" onClick={onChangePath}><Link to="/match">ตารางแข่ง</Link></Menu.Item>
-        <Menu.Item key="/match-result" onClick={onChangePath}><Link to="match-result">ผลการแข่ง</Link></Menu.Item>
-        <Menu.Item key="4">nav 4</Menu.Item>
-        <Menu.Item key="5">nav 5</Menu.Item>
+        <Menu.Item key="/" onClick={onChangePath}>
+          <Link to="/">ตารางคะแนน</Link>
+        </Menu.Item>
+        <Menu.Item key="/match" onClick={onChangePath}>
+          <Link to="/match">ตารางแข่ง</Link>
+        </Menu.Item>
+        <Menu.Item key="/match-result" onClick={onChangePath}>
+          <Link to="match-result">ผลการแข่ง</Link>
+        </Menu.Item>
+        <Menu.Item key="/top-score">
+          <Link to="top-score">ดาวซัลโว</Link>
+        </Menu.Item>
       </Menu>
       <div className="btn-toggle">
         <Button type="primary" onClick={onToggleMenu}>

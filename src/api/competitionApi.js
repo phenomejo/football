@@ -10,5 +10,10 @@ export default {
     return http.get(`/competitions/${id}/standings`, { params }).then((resp) => {
       return resp
     })
+  },
+  getScorers (id) {
+    return http.get(`/competitions/${id}/scorers`).then((resp) => {
+      return resp
+    })
   }
 }

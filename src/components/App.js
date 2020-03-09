@@ -8,6 +8,7 @@ import FooterPage from './layouts/FooterPage'
 import Competitions from './competitions/Competitions'
 import MatchSchedule from './matchs/MatchSchedule'
 import MatchResult from './matchs/MatchResult'
+import TopScore from './top-score/TopScore'
 
 const { Content } = Layout;
 
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/" exact component={Competitions} />
             <Route path="/match" component={MatchSchedule} />
             <Route path="/match-result" component={MatchResult} />
+            <Route path="/top-score" component={TopScore} />
           </div>
         </Content>
         <FooterPage/>

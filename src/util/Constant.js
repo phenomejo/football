@@ -16,6 +16,9 @@ export const STATIS_LIVE = 'LIVE'
 export const STATUS_IN_PLAY = 'IN_PLAY'
 export const STATUS_FINISHED = 'FINISHED'
 
+export const SET_CURRENT_SCORE = 'SET_CURRENT_SCORE'
+export const SET_SCORE = 'SET_SCORE'
+
 // export const COLUMNS = [
 //   { title: '#', dataIndex: 'position', width: '4%' },
 //   { title: 'Team', dataIndex: 'name', render: text => <a>{text}</a> },
