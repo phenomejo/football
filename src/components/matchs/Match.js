@@ -14,8 +14,8 @@ const Match = ({ matchList }) => {
 
     if (v.status !== STATUS_SCHEDULED) {
       const { fullTime, halfTime, extraTime, penalties } = v.score
-      const scoreHome = fullTime.homeTeam + halfTime.homeTeam + extraTime.homeTeam + penalties.homeTeam
-      const scoreAway = fullTime.awayTeam + halfTime.awayTeam + extraTime.awayTeam + penalties.awayTeam
+      const scoreHome = v.status === STATUS_FINISHED ? fullTime.homeTeam + extraTime.homeTeam + penalties.homeTeam : halfTime.homeTeam
+      const scoreAway = v.status === STATUS_FINISHED ? fullTime.awayTeam + extraTime.awayTeam + penalties.awayTeam : halfTime.awayTeam
       str = `${!scoreHome ? 0 : scoreHome} - ${!scoreAway ? 0 : scoreAway}`
     }
 
