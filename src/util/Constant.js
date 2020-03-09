@@ -11,6 +11,11 @@ export const SET_CURRENT_STANDING = 'SET_CURRENT_STANDING'
 
 export const SET_MATCH = 'SET_MATCH'
 
+export const STATUS_SCHEDULED = 'SCHEDULED'
+export const STATIS_LIVE = 'LIVE'
+export const STATUS_IN_PLAY = 'IN_PLAY'
+export const STATUS_FINISHED = 'FINISHED'
+
 // export const COLUMNS = [
 //   { title: '#', dataIndex: 'position', width: '4%' },
 //   { title: 'Team', dataIndex: 'name', render: text => <a>{text}</a> },

@@ -8,9 +8,9 @@ export const setMatchList = (payload) => {
   }
 }
 
-export const fetchMath = () => {
+export const fetchMath = (params) => {
   return async (dispatch) => {
-    const resp = await matchApi.getMatchList()
+    const resp = await matchApi.getMatchList(params)
     dispatch(setMatchList(resp.matches))
   }
 }

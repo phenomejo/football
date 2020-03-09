@@ -6,7 +6,8 @@ import HeaderPage from './layouts/HeaderPage'
 import FooterPage from './layouts/FooterPage'
 
 import Competitions from './competitions/Competitions'
-import Matchs from './matchs/Matchs'
+import MatchSchedule from './matchs/MatchSchedule'
+import MatchResult from './matchs/MatchResult'
 
 const { Content } = Layout;
 
@@ -23,7 +24,8 @@ const App = () => {
           </Breadcrumb> */}
           <div className="container">
             <Route path="/" exact component={Competitions} />
-            <Route path="/match" component={Matchs} />
+            <Route path="/match" component={MatchSchedule} />
+            <Route path="/match-result" component={MatchResult} />
           </div>
         </Content>
         <FooterPage/>

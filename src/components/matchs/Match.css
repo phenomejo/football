@@ -1,0 +1,21 @@
+.col-home {
+  text-align: right;
+}
+
+.col-away {
+  text-align: left;
+}
+
+.col-score {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1199px) {
+  .col-home {
+    text-align: center;
+  }
+  
+  .col-away {
+    text-align: center;
+  }
+}
