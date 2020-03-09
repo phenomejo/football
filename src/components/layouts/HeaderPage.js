@@ -34,7 +34,9 @@ const HeaderPage = () => {
     <>
     <Header>
       {/* <div className="logo" /> */}
-      <img src={require('@/assets/image/logo.jpg')} alt="logo" className="logo" />
+      <Link to="/" onClick={onChangePath}>
+        <img src={require('@/assets/image/logo.jpg')} alt="logo" className="logo" />
+      </Link>
       <Menu
         className="menu-item"
         theme="dark"
