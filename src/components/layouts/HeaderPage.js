@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useLocation  } from 'react-router-dom'
+import React, { useState, useEffect, useRef } from 'react'
+import { Link, useLocation, useHistory } from 'react-router-dom'
 import { Layout, Menu, Button, Icon } from 'antd'
 
 import './Layouts.css'
@@ -7,6 +7,8 @@ import './Layouts.css'
 const { Header } = Layout
 
 const HeaderPage = () => {
+  const history = useHistory()
+  const home = useRef(null)
   const [toggle, setToogle] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
 
@@ -26,17 +28,15 @@ const HeaderPage = () => {
     setToogle(!toggle)
   }
 
-  const onChangePath = () => {
-    setToogle(false)
+  const gotoHome = () => {
+    history.push('/')
+    home.current.props.onSelect({ key: '/' })
   }
 
   return (
     <>
     <Header>
-      {/* <div className="logo" /> */}
-      <Link to="/" onClick={onChangePath}>
-        <img src={require('@/assets/image/logo.jpg')} alt="logo" className="logo" />
-      </Link>
+      <img src={require('@/assets/image/logo.jpg')} alt="logo" className="logo" onClick={ gotoHome } />
       <Menu
         className="menu-item"
         theme="dark"
@@ -44,16 +44,16 @@ const HeaderPage = () => {
         defaultSelectedKeys={[useLocation().pathname]}
         style={{ lineHeight: '64px', display: toggle || width > 768 ? 'block' : 'none' }}
       >
-        <Menu.Item key="/" onClick={onChangePath}>
+        <Menu.Item ref={home} key="/" onClick={onToggleMenu}>
           <Link to="/">ตารางคะแนน</Link>
         </Menu.Item>
-        <Menu.Item key="/match" onClick={onChangePath}>
+        <Menu.Item key="/match" onClick={onToggleMenu}>
           <Link to="/match">ตารางแข่ง</Link>
         </Menu.Item>
-        <Menu.Item key="/match-result" onClick={onChangePath}>
+        <Menu.Item key="/match-result" onClick={onToggleMenu}>
           <Link to="match-result">ผลการแข่ง</Link>
         </Menu.Item>
-        <Menu.Item key="/top-score">
+        <Menu.Item key="/top-score" onClick={onToggleMenu}>
           <Link to="top-score">ดาวซัลโว</Link>
         </Menu.Item>
       </Menu>
