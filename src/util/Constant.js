@@ -19,6 +19,9 @@ export const STATUS_FINISHED = 'FINISHED'
 export const SET_CURRENT_SCORE = 'SET_CURRENT_SCORE'
 export const SET_SCORE = 'SET_SCORE'
 
+export const HTTP_REQ = 'HTTP_REQ'
+export const HTTP_REQ_DONE = 'HTTP_REQ_DONE'
+
 // export const COLUMNS = [
 //   { title: '#', dataIndex: 'position', width: '4%' },
 //   { title: 'Team', dataIndex: 'name', render: text => <a>{text}</a> },

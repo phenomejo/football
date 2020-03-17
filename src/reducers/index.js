@@ -3,6 +3,7 @@ import { leagueList } from './league'
 import { standing, standingList } from './standing'
 import { matchList } from './match'
 import { score, scoreList } from './score'
+import { screen } from './screen'
 
 const reducers = combineReducers({
   leagueList,
@@ -10,7 +11,8 @@ const reducers = combineReducers({
   standingList,
   matchList,
   score,
-  scoreList
+  scoreList,
+  screen
 })
 
 export default reducers

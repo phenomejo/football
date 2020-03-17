@@ -1,6 +1,9 @@
 import axios from 'axios'
 
 import { FULL_URL_API, TOKEN_API } from '../util/Constant'
+import { httpReq, httpReqDone } from '@/actions/screen'
+
+import store from '@/store'
 
 const http = axios.create({
   baseURL: FULL_URL_API,
@@ -15,9 +18,11 @@ http.interceptors.request.use( (config) => {
   if (!config.headers['X-Auth-Token']) {
     config.headers['X-Auth-Token'] = TOKEN_API
   }
+  store.dispatch(httpReq())
   return config
 }, (error) => {
   // Do something with request error
+  store.dispatch(httpReqDone())
   return Promise.reject(error)
 })
 
@@ -25,10 +30,12 @@ http.interceptors.request.use( (config) => {
 http.interceptors.response.use( (response) => {
   // Any status code that lie within the range of 2xx cause this function to trigger
   // Do something with response data
+  store.dispatch(httpReqDone())
   return response.data
 }, (error) => {
   // Any status codes that falls outside the range of 2xx cause this function to trigger
   // Do something with response error
+  store.dispatch(httpReqDone())
   return Promise.reject(error)
 })
 
