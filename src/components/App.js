@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route } from "react-router-dom"
-import { Layout, BackTop, Spin } from 'antd'
-import { useSelector } from 'react-redux'
+import { Layout, BackTop } from 'antd'
+// import { useSelector } from 'react-redux'
 
 import HeaderPage from './layouts/HeaderPage'
 import FooterPage from './layouts/FooterPage'
@@ -14,7 +14,7 @@ import TopScore from './top-score/TopScore'
 const { Content } = Layout;
 
 const App = () => {
-  const isLoading = useSelector(state => state.screen)
+  // const isLoading = useSelector(state => state.screen)
 
   return (
     <Layout>
@@ -26,7 +26,7 @@ const App = () => {
               <Breadcrumb.Item>List</Breadcrumb.Item>
               <Breadcrumb.Item>App</Breadcrumb.Item>
             </Breadcrumb> */}
-            { isLoading ? 
+            {/* { isLoading ? 
               <Spin tip="loading...">
                 <div className="container">
                 </div>
@@ -37,7 +37,13 @@ const App = () => {
                 <Route path="/match-result" component={MatchResult} />
                 <Route path="/top-score" component={TopScore} />
               </div>
-            }
+            } */}
+            <div className="container">
+              <Route path="/" exact component={Competitions} />
+              <Route path="/match" component={MatchSchedule} />
+              <Route path="/match-result" component={MatchResult} />
+              <Route path="/top-score" component={TopScore} />
+            </div>
           </Content>
         <FooterPage/>
       </BrowserRouter>
