@@ -25,17 +25,6 @@ const MatchSchedule = () => {
     return ()=> dispatch(setMatchList([]))
   }, [dispatch])
 
-  // if (matchList.length === 0) {
-  //   const dateFrom = moment().format('YYYY-MM-DD')
-  //   const dateTo = moment().add(10, 'days').format('YYYY-MM-DD')
-  //   const params = {
-  //     dateFrom,
-  //     dateTo,
-  //     status: `${STATUS_SCHEDULED},${STATIS_LIVE},${STATUS_IN_PLAY}`
-  //   }
-  //   dispatch(fetchMath(params))
-  // }
-
   return (
     <div className="page-content">
       { matchList.length === 0 ? <Empty /> : <Match matchList={matchList} /> }

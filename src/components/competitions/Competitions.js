@@ -16,9 +16,11 @@ const LeagueList = () => {
   const [scoreList, setScoreList] = useState([])
   const [standingType, setStandingType] = useState('TOTAL')
 
-  if (leagueList.length === 0)  {
-    dispatch(fetchComposition())
-  }
+  useEffect(() => {
+    if (leagueList.length === 0)  {
+      dispatch(fetchComposition())
+    }
+  }, [leagueList, dispatch])
 
   useEffect(() => {
     if (standing.length > 0) {

@@ -24,7 +24,7 @@
 .container {
   padding: 24px;
   padding-bottom: 80px;
-  margin: 24px auto;
+  margin: 16px auto;
   /* width: calc(100% - 260px); */
   min-height: calc(100vh - 130px);
   background: rgb(255, 255, 255);

@@ -25,17 +25,6 @@ const MatchResult = () => {
     return ()=> dispatch(setMatchList([]))
   }, [dispatch])
 
-  // if (matchList.length === 0) {
-  //   const dateFrom = moment().subtract(10, 'days').format('YYYY-MM-DD')
-  //   const dateTo = moment().format('YYYY-MM-DD')
-  //   const params = {
-  //     dateFrom,
-  //     dateTo,
-  //     status: STATUS_FINISHED
-  //   }
-  //   dispatch(fetchMath(params))
-  // }
-
   return (
     <div className="page-content">
       { matchList.length === 0 ? <Empty /> : <Match matchList={matchList} /> }

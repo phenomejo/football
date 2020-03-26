@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchComposition } from '@/actions/league'
@@ -14,9 +14,11 @@ const TopScore = () => {
 
   const [curLeague, setCurLeague] = useState()
 
-  if (leagueList.length === 0)  {
-    dispatch(fetchComposition())
-  }
+  useEffect(() => {
+    if (leagueList.length === 0)  {
+      dispatch(fetchComposition())
+    }
+  }, [leagueList, dispatch])
 
   const onSelectLeague = (v) => {
     const resp = scoreList.find(c => c.competition.id === v.id)
